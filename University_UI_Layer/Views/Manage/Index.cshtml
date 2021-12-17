@@ -1,0 +1,17 @@
+﻿@model University_UI_Layer.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage your account";
+}
+
+<h3 style="color: white">@ViewBag.Title.</h3>
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div class="row">
+    <div class="col-md-8" style="color: white">
+        <p style="color: white; padding-top: 5px; font-size: medium;">
+            @(Model.HasPassword ? Html.ActionLink("Change your password", "ChangePassword") 
+                : Html.ActionLink("Pick a password", "SetPassword"))
+        </p>
+        
+        
+    </div>
+</div>
